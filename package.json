@@ -1,0 +1,16 @@
+{
+  "name": "marinade-marp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marinade Finance branded Marp presentations",
+  "scripts": {
+    "dev": "marp --no-config-file --theme-set ./themes/ --html -w slides/deck.md",
+    "build": "marp --no-config-file --theme-set ./themes/ --html --allow-local-files slides/deck.md -o dist/deck.html",
+    "pdf": "marp --no-config-file --theme-set ./themes/ --html --allow-local-files --pdf slides/deck.md -o dist/deck.pdf",
+    "pptx": "marp --no-config-file --theme-set ./themes/ --html --allow-local-files --pptx slides/deck.md -o dist/deck.pptx",
+    "preview": "marp --no-config-file --theme-set ./themes/ --html --allow-local-files -p slides/deck.md"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4"
+  }
+}

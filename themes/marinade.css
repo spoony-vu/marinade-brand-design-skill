@@ -1,0 +1,678 @@
+/*!
+ * @theme marinade
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+@import url('https://fonts.bunny.net/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=PT+Serif:ital@0;1&display=swap');
+
+/* ── BASE TOKENS ── */
+:root {
+  --mn-dark: #151A1A;
+  --mn-white: #FFFFFF;
+  --mn-deep-teal: #194544;
+  --mn-brand-teal: #308D8A;
+  --mn-medium-teal: #2B8784;
+  --mn-muted-teal: #447579;
+  --mn-light-teal: #94C9C8;
+  --mn-soft-teal: #59A9A7;
+  --mn-body-secondary: #323A38;
+  --mn-dark-teal-text: #325856;
+  --mn-heading-teal: #1F6260;
+  --mn-muted-text: #7F7F7F;
+  --mn-chart-teal: #82B7B7;
+  --mn-near-white: #F3F3F3;
+  --mn-dark-card: #232329;
+  --mn-highlight: #FEF29D;
+
+  --mn-font-sans: 'DM Sans', system-ui, sans-serif;
+  --mn-font-serif: 'PT Serif', Georgia, serif;
+}
+
+/* ── SECTION = SLIDE ── */
+section {
+  font-family: var(--mn-font-sans);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--mn-dark);
+  background-color: var(--mn-white);
+  padding: 60px 80px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+/* ── TYPOGRAPHY ── */
+h1 {
+  font-family: var(--mn-font-sans);
+  font-weight: 600;
+  font-size: 2.2em;
+  line-height: 1.15;
+  color: var(--mn-dark);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.4em;
+  text-wrap: balance;
+}
+
+h2 {
+  font-family: var(--mn-font-sans);
+  font-weight: 600;
+  font-size: 1.6em;
+  line-height: 1.2;
+  color: var(--mn-deep-teal);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: var(--mn-font-sans);
+  font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.3;
+  color: var(--mn-heading-teal);
+  margin-bottom: 0.4em;
+}
+
+h4 {
+  font-family: var(--mn-font-sans);
+  font-weight: 600;
+  font-size: 1em;
+  color: var(--mn-brand-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7em;
+  margin-bottom: 0.6em;
+}
+
+h5 {
+  font-family: var(--mn-font-sans);
+  font-weight: 600;
+  font-size: 0.85em;
+  color: var(--mn-muted-text);
+}
+
+h6 {
+  font-family: var(--mn-font-sans);
+  font-weight: 400;
+  font-size: 0.7em;
+  color: var(--mn-muted-text);
+  letter-spacing: 0.04em;
+}
+
+p {
+  margin-bottom: 0.6em;
+  color: var(--mn-body-secondary);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--mn-dark);
+}
+
+em {
+  font-family: var(--mn-font-serif);
+  font-style: italic;
+  color: var(--mn-heading-teal);
+}
+
+a {
+  color: var(--mn-brand-teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--mn-light-teal);
+}
+
+a:hover {
+  border-bottom-color: var(--mn-brand-teal);
+}
+
+/* ── LISTS ── */
+ul, ol {
+  margin-bottom: 0.6em;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.35em;
+  color: var(--mn-body-secondary);
+  line-height: 1.5;
+}
+
+li::marker {
+  color: var(--mn-brand-teal);
+}
+
+/* ── CODE ── */
+code {
+  font-size: 0.85em;
+  background: var(--mn-near-white);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--mn-deep-teal);
+}
+
+pre {
+  background: var(--mn-dark);
+  color: var(--mn-near-white);
+  border-radius: 8px;
+  padding: 1.2em 1.5em;
+  font-size: 0.72em;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* ── BLOCKQUOTE ── */
+blockquote {
+  border-left: 4px solid var(--mn-brand-teal);
+  padding: 0.6em 1.2em;
+  margin: 0.8em 0;
+  background: transparent;
+  color: var(--mn-dark-teal-text);
+  font-size: 0.95em;
+}
+
+blockquote p {
+  color: var(--mn-dark-teal-text);
+}
+
+/* ── TABLES ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82em;
+  margin: 0.8em 0;
+}
+
+thead th {
+  font-weight: 600;
+  color: var(--mn-deep-teal);
+  border-bottom: 2px solid var(--mn-brand-teal);
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.5em 0.8em;
+  border-bottom: 1px solid var(--mn-near-white);
+  color: var(--mn-body-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── IMAGES ── */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── HORIZONTAL RULE (subtle divider) ── */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--mn-light-teal);
+  margin: 1.5em 0;
+}
+
+/* ── PAGINATION ── */
+section::after {
+  font-family: var(--mn-font-sans);
+  font-size: 0.5em;
+  font-weight: 500;
+  color: var(--mn-muted-text);
+  letter-spacing: 0.04em;
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
+
+/* ── HEADER & FOOTER ── */
+header {
+  position: absolute;
+  top: 28px;
+  left: 80px;
+  right: 80px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  font-size: 0.5em;
+  color: var(--mn-muted-text);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+header img {
+  height: 28px;
+  width: auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 28px;
+  left: 80px;
+  right: 80px;
+  font-size: 0.45em;
+  color: var(--mn-muted-text);
+  letter-spacing: 0.03em;
+}
+
+/* ═══════════════════════════════════════════
+   SLIDE CLASS VARIANTS
+   ═══════════════════════════════════════════ */
+
+/* ── LEAD: centered title slide ── */
+section:where(.lead) {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px;
+}
+
+section:where(.lead) h1 {
+  font-size: 2.6em;
+  margin-bottom: 0.3em;
+}
+
+section:where(.lead) p {
+  font-size: 0.9em;
+  color: var(--mn-muted-text);
+  max-width: 600px;
+}
+
+section:where(.lead) h4 {
+  margin-bottom: 1em;
+}
+
+/* ── INVERT: dark background ── */
+section:where(.invert) {
+  background-color: var(--mn-dark);
+  color: var(--mn-near-white);
+}
+
+section:where(.invert) h1 {
+  color: var(--mn-white);
+}
+
+section:where(.invert) h2 {
+  color: var(--mn-light-teal);
+}
+
+section:where(.invert) h3 {
+  color: var(--mn-soft-teal);
+}
+
+section:where(.invert) h4 {
+  color: var(--mn-brand-teal);
+}
+
+section:where(.invert) p,
+section:where(.invert) li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+section:where(.invert) li::marker {
+  color: var(--mn-light-teal);
+}
+
+section:where(.invert) strong {
+  color: var(--mn-white);
+}
+
+section:where(.invert) code {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--mn-light-teal);
+}
+
+section:where(.invert) blockquote {
+  border-left-color: var(--mn-light-teal);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+section:where(.invert) blockquote p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+section:where(.invert) thead th {
+  color: var(--mn-light-teal);
+  border-bottom-color: var(--mn-muted-teal);
+}
+
+section:where(.invert) tbody td {
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+section:where(.invert) hr {
+  background: var(--mn-muted-teal);
+}
+
+section:where(.invert) footer,
+section:where(.invert) header {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+section:where(.invert)::after {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── TEAL: deep teal background ── */
+section:where(.teal) {
+  background-color: var(--mn-deep-teal);
+  color: var(--mn-near-white);
+}
+
+section:where(.teal) h1 {
+  color: var(--mn-white);
+}
+
+section:where(.teal) h2 {
+  color: var(--mn-light-teal);
+}
+
+section:where(.teal) h3,
+section:where(.teal) h4 {
+  color: var(--mn-light-teal);
+}
+
+section:where(.teal) p,
+section:where(.teal) li {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+section:where(.teal) li::marker {
+  color: var(--mn-light-teal);
+}
+
+section:where(.teal) strong {
+  color: var(--mn-white);
+}
+
+section:where(.teal) blockquote {
+  border-left-color: var(--mn-brand-teal);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+section:where(.teal) blockquote p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+section:where(.teal) hr {
+  background: var(--mn-muted-teal);
+}
+
+section:where(.teal) footer,
+section:where(.teal) header {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+section:where(.teal)::after {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── STATEMENT: large centered quote/statement ── */
+section:where(.statement) {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 120px;
+}
+
+section:where(.statement) h1 {
+  font-size: 2.4em;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--mn-dark);
+  max-width: 900px;
+}
+
+section:where(.statement) h4 {
+  color: var(--mn-brand-teal);
+  margin-bottom: 1.2em;
+}
+
+section:where(.statement) p {
+  font-size: 0.85em;
+  color: var(--mn-muted-text);
+  max-width: 600px;
+}
+
+/* ── COVER: full-bleed image cover ── */
+section:where(.cover) {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  padding: 80px;
+  background-size: cover;
+  background-position: center;
+}
+
+section:where(.cover) h1 {
+  color: var(--mn-white);
+  font-size: 2.8em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+}
+
+section:where(.cover) p {
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ── SPLIT: two-column layout ── */
+section:where(.split) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0 60px;
+  padding: 60px 80px;
+}
+
+section:where(.split) h1,
+section:where(.split) h2 {
+  grid-column: 1 / -1;
+}
+
+/* ── METRICS: large number display ── */
+section:where(.metrics) {
+  padding: 60px 80px;
+}
+
+section:where(.metrics) h1 {
+  margin-bottom: 0.8em;
+}
+
+/* ── GRID: for card-like layouts ── */
+section:where(.grid) {
+  padding: 60px 80px;
+}
+
+/* ═══════════════════════════════════════════
+   UTILITY CLASSES (via HTML in Marp)
+   ═══════════════════════════════════════════ */
+
+/* Metric / KPI number styling */
+.metric {
+  font-family: var(--mn-font-sans);
+  font-weight: 600;
+  font-size: 2.4em;
+  color: var(--mn-dark);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-size: 0.6em;
+  color: var(--mn-muted-text);
+  font-weight: 400;
+  margin-top: 0.3em;
+  letter-spacing: 0.02em;
+}
+
+.metric-teal {
+  color: var(--mn-brand-teal);
+}
+
+/* Tag / pill labels */
+.tag {
+  display: inline-block;
+  font-size: 0.55em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--mn-near-white);
+  color: var(--mn-brand-teal);
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+}
+
+.tag-teal {
+  background: var(--mn-brand-teal);
+  color: var(--mn-white);
+}
+
+/* Accent word (PT Serif italic) */
+.accent {
+  font-family: var(--mn-font-serif);
+  font-style: italic;
+  color: var(--mn-heading-teal);
+}
+
+/* Columns helper (for HTML blocks) */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.columns-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+/* Card container */
+.card {
+  background: var(--mn-near-white);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.card h3 {
+  font-size: 0.9em;
+  margin-bottom: 0.3em;
+}
+
+.card p {
+  font-size: 0.78em;
+  color: var(--mn-muted-text);
+  margin-bottom: 0;
+}
+
+/* Step numbering */
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--mn-brand-teal);
+  color: var(--mn-white);
+  font-size: 0.65em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Timeline dots */
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--mn-brand-teal);
+}
+
+.dot-light {
+  background: var(--mn-light-teal);
+}
+
+/* Chart bar (CSS-only simple bars) */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  height: 240px;
+  padding-top: 20px;
+}
+
+.bar {
+  flex: 1;
+  background: var(--mn-light-teal);
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  min-width: 60px;
+  transition: height 0.3s ease-out;
+}
+
+.bar-label {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.6em;
+  font-weight: 600;
+  color: var(--mn-chart-teal);
+}
+
+.bar-cat {
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.55em;
+  color: var(--mn-chart-teal);
+}
+
+/* Highlight marker */
+.highlight {
+  background: var(--mn-highlight);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+/* Subtle note text */
+.note {
+  font-size: 0.6em;
+  color: var(--mn-muted-text);
+  margin-top: 1em;
+}
+
+/* Logo row */
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.logo-row img {
+  height: 48px;
+  width: auto;
+  opacity: 0.85;
+}
