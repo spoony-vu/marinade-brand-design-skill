@@ -654,10 +654,13 @@
       <div class="install-step">
         <div class="step-number">1</div>
         <div class="step-content">
-          <h4>Copy the skill folder</h4>
-          <p>Place the <code>marinade-brand-design</code> folder into your Claude Code skills directory:</p>
-          <div class="code-block" style="margin-top: 8px;">~/.claude/skills/marinade-brand-design/
-  SKILL.md   <span class="code-comment"># Brand system, palettes, archetypes, CSS backgrounds</span></div>
+          <h4>Clone and copy the skill</h4>
+          <p>Clone the repo and place the skill into your Claude Code skills directory:</p>
+          <div class="code-block" style="margin-top: 8px;"><span class="code-keyword">git clone</span> <span class="code-string">https://github.com/spoony-vu/marinade-brand-design-skill.git</span>
+
+<span class="code-comment"># Copy into Claude Code skills</span>
+<span class="code-keyword">cp</span> -r marinade-brand-design-skill ~/.claude/skills/marinade-brand-design</div>
+          <p style="margin-top: 8px; font-size: 13px; color: var(--mn-muted-text);">Or manually place <code>SKILL.md</code> and <code>assets/</code> into <code>~/.claude/skills/marinade-brand-design/</code></p>
         </div>
       </div>
       <div class="install-step">
