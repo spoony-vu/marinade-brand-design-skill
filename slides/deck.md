@@ -3,7 +3,7 @@ marp: true
 theme: marinade
 paginate: true
 header: '![w:120](../assets/logos/marinade-logo.svg)'
-footer: 'Marinade Finance | 2026'
+footer: ''
 ---
 
 <!-- _class: lead -->
@@ -40,28 +40,22 @@ Marinade solves this by providing:
 
 ## Key metrics
 
-<div class="columns">
-<div>
-
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div class="bento">
 <div class="metric">$2.1B</div>
 <div class="metric-label">Total value locked</div>
-
-<br>
-
+</div>
+<div class="bento">
 <div class="metric metric-teal">8.81%</div>
 <div class="metric-label">Current APY</div>
-
 </div>
-<div>
-
+<div class="bento">
 <div class="metric">12.4M</div>
 <div class="metric-label">SOL staked</div>
-
-<br>
-
+</div>
+<div class="bento">
 <div class="metric">400+</div>
 <div class="metric-label">Validators in delegation strategy</div>
-
 </div>
 </div>
 
@@ -163,20 +157,20 @@ graph TB
 ## Market sizing
 
 <div class="columns-3">
-<div style="text-align:center">
+<div class="bento">
 <div class="metric" style="color:#FFFFFF">$48B</div>
 <div class="metric-label" style="color:rgba(255,255,255,0.6)">TAM</div>
-<p style="font-size:0.7em;color:rgba(255,255,255,0.65)">Total staked SOL market cap</p>
+<p style="font-size:0.7em;color:rgba(255,255,255,0.65);margin-top:0.4em">Total staked SOL market cap</p>
 </div>
-<div style="text-align:center">
+<div class="bento">
 <div class="metric" style="color:#94C9C8">$12B</div>
 <div class="metric-label" style="color:rgba(255,255,255,0.6)">SAM</div>
-<p style="font-size:0.7em;color:rgba(255,255,255,0.65)">Liquid staking addressable market</p>
+<p style="font-size:0.7em;color:rgba(255,255,255,0.65);margin-top:0.4em">Liquid staking addressable market</p>
 </div>
-<div style="text-align:center">
+<div class="bento">
 <div class="metric" style="color:#FFFFFF">$2.1B</div>
 <div class="metric-label" style="color:rgba(255,255,255,0.6)">SOM</div>
-<p style="font-size:0.7em;color:rgba(255,255,255,0.65)">Marinade current TVL</p>
+<p style="font-size:0.7em;color:rgba(255,255,255,0.65);margin-top:0.4em">Marinade current TVL</p>
 </div>
 </div>
 
@@ -197,6 +191,8 @@ graph TB
 <div class="note">Growth driven by native staking launch (Q2 '24) and DeFi integrations expansion</div>
 
 ---
+
+<!-- _class: compact -->
 
 ## Competitive *positioning*
 
@@ -259,7 +255,7 @@ The delegation strategy optimizes for **network health** while maximizing staker
 
 <div class="logo-row" style="justify-content:center;gap:48px;margin-top:40px">
 
-![w:80](../assets/logos/marinade-icon.png) ![w:80](../assets/logos/jito-logo.png) ![w:80](../assets/logos/kamino-logo.svg) ![w:80](../assets/logos/flame-protocol.png) ![w:80](../assets/logos/cloud-mascot.png) ![w:80](../assets/logos/compass-icon.png)
+![w:100](../assets/logos/marinade-icon.png) ![w:100](../assets/logos/jito-logo.png) ![w:100](../assets/logos/kamino-logo.svg) ![w:100](../assets/logos/flame-protocol.png) ![w:100](../assets/logos/cloud-mascot.png) ![w:100](../assets/logos/compass-icon.png)
 
 </div>
 
@@ -277,21 +273,15 @@ Integrated with **30+ DeFi protocols** across the Solana ecosystem for maximum m
 ## Revenue model
 
 <div class="columns" style="margin-top:24px">
-<div>
-
+<div class="bento">
 <div class="metric" style="color:#94C9C8">2%</div>
 <div class="metric-label" style="color:rgba(255,255,255,0.5)">Staking commission</div>
-
 <p style="font-size:0.75em;margin-top:12px">Applied to staking rewards earned by validators in the Marinade delegation strategy</p>
-
 </div>
-<div>
-
+<div class="bento">
 <div class="metric" style="color:#94C9C8">$42M</div>
 <div class="metric-label" style="color:rgba(255,255,255,0.5)">Annual protocol revenue</div>
-
 <p style="font-size:0.75em;margin-top:12px">Sustainable revenue directly tied to network staking activity and SOL price</p>
-
 </div>
 </div>
 

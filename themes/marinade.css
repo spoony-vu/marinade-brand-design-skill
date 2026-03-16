@@ -25,6 +25,7 @@
   --mn-near-white: #F3F3F3;
   --mn-dark-card: #232329;
   --mn-highlight: #FEF29D;
+  --mn-light-teal-bg: #EDF5F3;
 
   --mn-font-sans: 'DM Sans', system-ui, sans-serif;
   --mn-font-serif: 'PT Serif', Georgia, serif;
@@ -37,11 +38,20 @@ section {
   font-weight: 400;
   line-height: 1.45;
   color: var(--mn-dark);
-  background-color: var(--mn-white);
+  background-color: var(--mn-light-teal-bg);
   padding: 60px 80px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.01em;
+  overflow: hidden;
+}
+
+/* ── MERMAID DIAGRAMS ── */
+section svg[id^="mermaid"],
+section .mermaid svg,
+section pre.mermaid svg {
+  max-height: 420px;
+  width: auto;
 }
 
 /* ── TYPOGRAPHY ── */
@@ -187,27 +197,47 @@ blockquote p {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.82em;
-  margin: 0.8em 0;
+  font-size: 0.65em;
+  margin: 0.6em 0;
+  border: 1px solid rgba(48,141,138,0.12);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 thead th {
   font-weight: 600;
-  color: var(--mn-deep-teal);
-  border-bottom: 2px solid var(--mn-brand-teal);
-  padding: 0.6em 0.8em;
+  font-size: 0.95em;
+  color: var(--mn-white);
+  background: var(--mn-deep-teal);
+  border-bottom: none;
+  padding: 0.55em 0.7em;
   text-align: left;
+  letter-spacing: -0.01em;
+}
+
+thead th:first-child {
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
 }
 
 tbody td {
-  padding: 0.5em 0.8em;
-  border-bottom: 1px solid var(--mn-near-white);
+  padding: 0.45em 0.7em;
+  border-bottom: 1px solid rgba(48,141,138,0.08);
   color: var(--mn-body-secondary);
   font-variant-numeric: tabular-nums;
 }
 
 tbody tr:last-child td {
   border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(48,141,138,0.03);
+}
+
+tbody td:first-child {
+  font-weight: 600;
+  color: var(--mn-dark);
 }
 
 /* ── IMAGES ── */
@@ -365,9 +395,9 @@ section:where(.invert)::after {
   color: rgba(255, 255, 255, 0.35);
 }
 
-/* ── TEAL: deep teal background ── */
+/* ── TEAL: deep teal gradient background (separator slides) ── */
 section:where(.teal) {
-  background-color: var(--mn-deep-teal);
+  background: linear-gradient(180deg, #0c2a29 0%, #031715 100%);
   color: var(--mn-near-white);
 }
 
@@ -430,8 +460,8 @@ section:where(.statement) {
 }
 
 section:where(.statement) h1 {
-  font-size: 2.4em;
-  font-weight: 400;
+  font-size: 1.8em;
+  font-weight: 600;
   line-height: 1.35;
   color: var(--mn-dark);
   max-width: 900px;
@@ -448,25 +478,26 @@ section:where(.statement) p {
   max-width: 600px;
 }
 
-/* ── COVER: full-bleed image cover ── */
+/* ── COVER: teal gradient cover (separator slides) ── */
 section:where(.cover) {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   padding: 80px;
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(180deg, #8dc5d1 0%, #bddbd7 50%, #d0e3d8 100%);
 }
 
 section:where(.cover) h1 {
-  color: var(--mn-white);
+  color: var(--mn-dark);
   font-size: 2.8em;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+}
+
+section:where(.cover) h4 {
+  color: var(--mn-deep-teal);
 }
 
 section:where(.cover) p {
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+  color: var(--mn-body-secondary);
 }
 
 /* ── SPLIT: two-column layout ── */
@@ -480,6 +511,10 @@ section:where(.split) {
 
 section:where(.split) h1,
 section:where(.split) h2 {
+  grid-column: 1 / -1;
+}
+
+section:where(.split) > div {
   grid-column: 1 / -1;
 }
 
@@ -672,7 +707,75 @@ section:where(.grid) {
 }
 
 .logo-row img {
-  height: 48px;
+  height: 40px;
   width: auto;
+  max-width: 120px;
+  object-fit: contain;
   opacity: 0.85;
 }
+
+/* Bento card (frosted glass container) */
+.bento {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+section:where(.invert) .bento,
+section:where(.teal) .bento {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+section:not(.invert):not(.teal) .bento {
+  background: var(--mn-white);
+  border-color: rgba(48, 141, 138, 0.12);
+}
+
+/* ═══════════════════════════════════════════
+   SIZE VARIANTS
+   ═══════════════════════════════════════════ */
+
+/* Slide-level: compact sizing for data-heavy slides */
+section:where(.compact) {
+  font-size: 22px;
+  padding: 48px 64px;
+}
+
+section:where(.compact) h1 { font-size: 1.8em; }
+section:where(.compact) h2 { font-size: 1.35em; }
+section:where(.compact) h3 { font-size: 1.05em; }
+
+/* Slide-level: dense sizing for tables & comparisons */
+section:where(.dense) {
+  font-size: 18px;
+  padding: 40px 56px;
+}
+
+section:where(.dense) h1 { font-size: 1.6em; }
+section:where(.dense) h2 { font-size: 1.25em; }
+section:where(.dense) h3 { font-size: 1em; }
+
+/* Text size utilities (apply to any element) */
+.text-xs { font-size: 0.55em !important; }
+.text-sm { font-size: 0.7em !important; }
+.text-base { font-size: 1em !important; }
+.text-lg { font-size: 1.15em !important; }
+.text-xl { font-size: 1.3em !important; }
+.text-2xl { font-size: 1.6em !important; }
+.text-3xl { font-size: 2em !important; }
+
+/* Heading size overrides (apply to section) */
+section:where(.h-sm) h1 { font-size: 1.6em; }
+section:where(.h-sm) h2 { font-size: 1.2em; }
+section:where(.h-sm) h3 { font-size: 0.95em; }
+
+section:where(.h-lg) h1 { font-size: 2.8em; }
+section:where(.h-lg) h2 { font-size: 2em; }
+section:where(.h-lg) h3 { font-size: 1.4em; }
+
+section:where(.h-xl) h1 { font-size: 3.2em; }
+section:where(.h-xl) h2 { font-size: 2.4em; }
+section:where(.h-xl) h3 { font-size: 1.7em; }
