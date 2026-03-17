@@ -605,9 +605,14 @@
     }
     .footer a { color: var(--mn-brand-teal); text-decoration: none; }
 
-    /* Responsive */
+    /* Responsive — tablet */
     @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .hero { padding: 56px 0 40px; }
       .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; margin-bottom: 24px; }
+      section { padding: 36px 0; }
+      .section-heading { font-size: 24px; margin-bottom: 20px; }
       .color-grid { grid-template-columns: repeat(2, 1fr); }
       .bg-grid-5 { grid-template-columns: repeat(2, 1fr) !important; }
       .slide-grid { grid-template-columns: 1fr; }
@@ -617,6 +622,60 @@
       .type-meta { width: auto; }
       .recipe-body { grid-template-columns: 1fr; }
       .recipe-prompt { border-right: none; border-bottom: 1px solid var(--mn-border); }
+      .util-grid { grid-template-columns: 1fr 1fr; }
+      .bento-demo { grid-template-columns: repeat(2, 1fr); }
+      .code-block { padding: 16px; font-size: 12px; }
+      .card { padding: 20px; }
+      .recipe-header { padding: 16px 20px; }
+      .recipe-prompt { padding: 16px 20px; }
+    }
+
+    /* Responsive — mobile */
+    @media (max-width: 480px) {
+      .container { padding: 0 14px; }
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 26px; letter-spacing: -0.02em; }
+      .hero p { font-size: 15px; }
+      .hero::before { width: 360px; height: 360px; }
+      .badge { font-size: 11px; padding: 5px 10px; }
+      section { padding: 28px 0; }
+      .section-title { font-size: 12px; }
+      .section-heading { font-size: 21px; margin-bottom: 16px; }
+      .color-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .color-swatch-preview { height: 48px; }
+      .color-swatch-info { padding: 8px 10px; }
+      .color-swatch-name { font-size: 12px; }
+      .color-swatch-hex { font-size: 11px; }
+      .slide-grid { gap: 12px; }
+      .slide-preview { padding: 14px 16px; font-size: 9px; }
+      .slide-label { padding: 10px 14px; font-size: 12px; }
+      .type-row { padding: 14px 16px; }
+      .card { padding: 16px; border-radius: 10px; }
+      .recipe-header { padding: 14px 16px; gap: 10px; }
+      .recipe-title { font-size: 14px; }
+      .recipe-archetype { font-size: 10px; padding: 2px 8px; }
+      .recipe-prompt { padding: 14px 16px; }
+      .recipe-prompt-text { font-size: 13px; }
+      .recipe-notes { padding: 12px 16px; }
+      .install-step { gap: 12px; }
+      .step-number { width: 28px; height: 28px; font-size: 12px; border-radius: 7px; }
+      .step-content h4 { font-size: 14px; }
+      .step-content p { font-size: 13px; }
+      .code-block { padding: 14px 16px; font-size: 11px; border-radius: 8px; }
+      .install-actions { gap: 8px; }
+      .install-btn { padding: 6px 12px; font-size: 12px; }
+      .voice-card { padding: 16px; font-size: 13px; }
+      .rule-card { padding: 16px; }
+      .rule-card h4 { font-size: 13px; }
+      .rule-card p { font-size: 12px; }
+      .util-grid { grid-template-columns: 1fr; }
+      .util-card { padding: 16px; }
+      .bento-demo { grid-template-columns: 1fr 1fr; gap: 6px; }
+      .bento-item { padding: 12px 10px; }
+      .mini-table-demo { font-size: 11px; }
+      .mini-table-demo thead th { padding: 6px 8px; font-size: 10px; }
+      .mini-table-demo tbody td { padding: 5px 8px; }
+      .footer { padding: 32px 0 24px; font-size: 13px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
