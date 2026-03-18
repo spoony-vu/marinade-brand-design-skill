@@ -2240,27 +2240,35 @@ npm run dev        <span class="code-comment"># Watch mode with hot reload</span
     <div class="card">
       <div class="code-block"><span class="code-comment"># ~/.claude/skills/marinade-brand-design/</span>
 
-<span class="code-keyword">SKILL.md</span>                    <span class="code-comment"># Core brand system (colors, type, grid, tone)</span>
-                              <span class="code-comment"># + gotchas, verification checklist</span>
+<span class="code-keyword">SKILL.md</span>              <span class="code-comment"># Complete brand design system</span>
+                        <span class="code-comment"># - 16 exact hex colors from master PPTX theme</span>
+                        <span class="code-comment"># - DM Sans + PT Serif type scale (7 levels)</span>
+                        <span class="code-comment"># - 12-column grid with margin/spacing tokens</span>
+                        <span class="code-comment"># - 16 slide archetype patterns with geometry</span>
+                        <span class="code-comment"># - Visual element rules (flat fills, no shadows)</span>
+                        <span class="code-comment"># - Tone of voice and copy guidelines</span>
+                        <span class="code-comment"># - Composition hierarchy (3-layer system)</span>
+                        <span class="code-comment"># - CSS custom properties for HTML/React output</span>
+                        <span class="code-comment"># - EMU values for python-pptx generation</span>
+                        <span class="code-comment"># - Marp presentation system (theme + project)</span>
+                        <span class="code-comment"># - Mermaid diagram brand styling</span>
+                        <span class="code-comment"># - CSS-only chart components</span>
 
-<span class="code-keyword">references/</span>
-  <span class="code-keyword">archetypes.md</span>           <span class="code-comment"># 16 slide layout patterns with geometry</span>
-  <span class="code-keyword">marp.md</span>                 <span class="code-comment"># Marp theme, classes, HTML utilities, build</span>
-  <span class="code-keyword">diagrams.md</span>             <span class="code-comment"># Mermaid config, CSS charts, color sequence</span>
+<span class="code-comment"># Backgrounds are pure CSS — no image files needed</span>
+<span class="code-comment"># Default: #EDF5F3 (light teal) on all slides</span>
+<span class="code-comment"># cover class: teal-to-mint gradient</span>
+<span class="code-comment"># teal class: deep teal gradient into darker</span>
 
-<span class="code-keyword">examples/</span>
-  <span class="code-keyword">cover-slide.html</span>        <span class="code-comment"># Gold standard: Title/Cover (archetype 1)</span>
-  <span class="code-keyword">three-metric.html</span>       <span class="code-comment"># Gold standard: Three-Metric (archetype 6)</span>
-  <span class="code-keyword">step-process.html</span>       <span class="code-comment"># Gold standard: Step Process (archetype 8)</span>
+<span class="code-comment"># ~/Documents/Claude Code/marinade-marp/</span>
 
-<span class="code-keyword">themes/marinade.css</span>     <span class="code-comment"># Custom Marp theme (all brand tokens)</span>
-<span class="code-keyword">slides/deck.md</span>          <span class="code-comment"># Sample 16-slide showcase deck</span>
-<span class="code-keyword">assets/logos/</span>           <span class="code-comment"># Marinade wordmark, icon, hat (SVG + PNG)</span>
-<span class="code-keyword">assets/icons/</span>           <span class="code-comment"># Checkmark, pie chart, QR codes</span>
-<span class="code-keyword">assets/backgrounds/</span>     <span class="code-comment"># Teal gradient, solid fills from PPTX</span>
+<span class="code-keyword">themes/marinade.css</span>  <span class="code-comment"># Custom Marp theme (all brand tokens)</span>
+<span class="code-keyword">slides/deck.md</span>       <span class="code-comment"># Sample 16-slide showcase deck</span>
+<span class="code-keyword">assets/logos/</span>        <span class="code-comment"># Marinade, Jito, Kamino logos (SVG + PNG)</span>
+<span class="code-keyword">assets/icons/</span>        <span class="code-comment"># Checkmark, pie chart, QR codes</span>
+<span class="code-keyword">assets/backgrounds/</span>  <span class="code-comment"># Teal gradient, solid fills from PPTX</span>
 
 <span class="code-comment"># Source: Marinade Master Slide Template .pptx</span>
-<span class="code-comment"># 41 layouts, 11 slides, 3 fonts, 39 media assets</span></div>
+<span class="code-comment"># 41 layouts, 11 slides, 3 fonts, 39 media assets extracted</span></div>
     </div>
   </section>
 
