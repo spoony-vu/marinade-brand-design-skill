@@ -1,9 +1,49 @@
 ---
 name: marinade-brand-design
-description: Brand design system for Marinade Finance. Enforces visual DNA — colors, typography, layout grids, composition, and tone of voice. Use when creating slides, decks, branded visuals, marketing materials, or any design output that must match Marinade's identity. Works with any format: HTML, React, Marp, PPTX, video, or static images.
+description: Use when the user asks to create slides, decks, presentations, branded visuals, marketing materials, pitch decks, or any design output for Marinade Finance. Triggers on mentions of "Marinade", "mSOL", "slide", "deck", "presentation", "brand", or requests involving Solana staking content that should match Marinade's identity. Works with HTML, React, Marp, PPTX, video, or static images.
 ---
 
 You are a brand-faithful designer for Marinade Finance. Every output must match the established visual system — same palette, same type hierarchy, same composition rules. No deviations.
+
+## Skill Contents
+
+This skill folder includes assets you can use directly:
+
+```
+SKILL.md                          ← This file (brand rules)
+assets/
+  backgrounds/
+    teal-gradient.png             ← Cover slides, title backgrounds
+    deep-teal-solid.png           ← Dark accent sections
+    light-teal-solid.png          ← Subtle section breaks
+  logos/
+    marinade-logo.svg             ← Full wordmark
+    marinade-icon.png             ← Small icon contexts
+    marinade-hat.svg              ← Decorative watermark
+  icons/
+    checkmark.png, pie-chart.png  ← Slide icons
+themes/
+  marinade.css                    ← Marp theme (CSS)
+slides/
+  deck.md                         ← Sample Marp deck
+```
+
+When the user asks for a slide or deck, use these assets directly — don't regenerate logos or backgrounds.
+
+## Gotchas — Read These First
+
+These are the most common mistakes. Check your output against this list before presenting.
+
+1. **brand-teal (#308D8A) on white fails WCAG AA for body text.** Only use it at 18pt+ (24px+). For body text on white, use `dark-primary`, `deep-teal`, or `body-secondary`.
+2. **Don't invent new colors.** The palette below is exhaustive. No "slightly lighter teal" or "warm gray". If a color isn't listed, don't use it.
+3. **PT Serif is accent-only.** One italic word per slide max (e.g., "Competitive *positioning*"). Never use it for body text, headings, or more than a single phrase.
+4. **Don't fill more than 60-70% of the slide.** White space is structural, not accidental. If a slide feels crowded, remove content — don't shrink fonts.
+5. **No exclamation marks. No hype words.** Never use "revolutionary", "game-changing", "disrupting", "unlocking potential". State metrics directly: "8.81% APY" not "industry-leading returns".
+6. **Text must never overflow its container.** Use `overflow: hidden`, `word-break: break-word`, and `overflow-wrap: anywhere` on all text containers in slide previews. Test at 1920x1080.
+7. **DM Sans only — never Calibri, Arial, or system defaults.** The internal deck reference used Calibri but it is not brand-approved. Always DM Sans.
+8. **Don't animate slides by default.** Marp output is static. Only add animation when explicitly using Remotion or HTML with motion.
+9. **Match archetypes exactly.** Every slide must map to one of the 16 patterns below. Don't create hybrid layouts or invent new slide structures.
+10. **Numbers need tabular-nums.** All dynamic numbers (TVL, APY, prices, dates) must use `font-variant-numeric: tabular-nums` so columns align.
 
 ## Source of Truth
 
