@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>Step Process Slide — Marinade Brand Example</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mn-dark: #151A1A;
+    --mn-white: #FFFFFF;
+    --mn-deep-teal: #194544;
+    --mn-brand-teal: #308D8A;
+    --mn-medium-teal: #2B8784;
+    --mn-light-teal: #94C9C8;
+    --mn-body-secondary: #323A38;
+    --mn-muted-text: #7F7F7F;
+    --mn-slide-width: 1920px;
+    --mn-slide-height: 1080px;
+    --mn-margin-x: 80px;
+    --mn-margin-y: 82px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .slide {
+    width: var(--mn-slide-width);
+    height: var(--mn-slide-height);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: var(--mn-white);
+    color: var(--mn-dark);
+    padding: var(--mn-margin-y) var(--mn-margin-x);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-logo {
+    position: absolute;
+    top: var(--mn-margin-y);
+    right: var(--mn-margin-x);
+    height: 32px;
+    opacity: 0.7;
+  }
+
+  h2 {
+    font-size: 54px;
+    font-weight: 600;
+    color: var(--mn-deep-teal);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    text-wrap: balance;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    color: var(--mn-body-secondary);
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1760px;
+    flex: 1;
+    align-content: center;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Connecting line between steps */
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: calc(50% + 36px);
+    width: calc(100% - 32px);
+    height: 2px;
+    background: rgba(48, 141, 138, 0.2);
+  }
+
+  .step-num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--mn-brand-teal);
+    color: var(--mn-white);
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--mn-dark);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .step-body {
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--mn-body-secondary);
+    line-height: 1.5;
+    max-width: 360px;
+  }
+
+  .step-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+    color: var(--mn-brand-teal);
+  }
+</style>
+</head>
+<body>
+<!--
+  ARCHETYPE: 8. Step Process (4-Step)
+  - Centered title at top
+  - 4 equal-width columns with numbered circles
+  - Connecting line between steps
+  - DM Sans SemiBold titles, regular descriptions
+  - Lucide icons above each step (optional)
+-->
+<div class="slide">
+  <img class="header-logo" src="../assets/logos/marinade-logo.svg" alt="Marinade Finance" onerror="this.style.display='none'">
+
+  <h2>How Marinade staking works</h2>
+  <div class="subtitle">Four steps from SOL to earning yield across DeFi</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">Deposit SOL</div>
+      <div class="step-body">Connect your wallet and deposit any amount of SOL into the Marinade staking pool</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">Receive mSOL</div>
+      <div class="step-body">Get mSOL tokens representing your staked position. The exchange rate increases as rewards accrue</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">Earn yield</div>
+      <div class="step-body">Staking rewards are distributed across 400+ validators using an automated delegation strategy</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-title">Use in DeFi</div>
+      <div class="step-body">Deploy mSOL across lending, liquidity pools, and other protocols while continuing to earn staking yield</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
