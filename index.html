@@ -29,6 +29,11 @@
       --mn-bg: #F3F7F7;
       --mn-card-bg: #FFFFFF;
       --mn-border: #E5E5E3;
+      --mn-cat-teal: #308D8A;
+      --mn-cat-indigo: #818CF8;
+      --mn-cat-coral: #CF7B63;
+      --mn-cat-lavender: #A794D4;
+      --mn-cat-rose: #D4789B;
     }
 
     html { scroll-behavior: smooth; }
@@ -1745,6 +1750,66 @@
           <div class="color-swatch-name">Highlight Yellow</div>
           <div class="color-swatch-hex">#FEF29D</div>
         </div>
+      </div>
+    </div>
+
+    <h3 style="font-size: 16px; font-weight: 600; line-height: 1.25; margin: 32px 0 12px;">Categorical Palette</h3>
+    <p style="font-size: 13px; color: var(--mn-muted-text); margin-bottom: 16px;">For differentiating concepts side by side — card border strokes, tags, multi-series charts.</p>
+    <div class="color-grid" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background: #308D8A;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">cat-teal</div>
+          <div class="color-swatch-hex">#308D8A</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background: #818CF8;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">cat-indigo</div>
+          <div class="color-swatch-hex">#818CF8</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background: #CF7B63;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">cat-coral</div>
+          <div class="color-swatch-hex">#CF7B63</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background: #A794D4;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">cat-lavender</div>
+          <div class="color-swatch-hex">#A794D4</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background: #D4789B;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">cat-rose</div>
+          <div class="color-swatch-hex">#D4789B</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Usage example: cards with categorical left borders -->
+    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+      <div style="background: var(--mn-card-bg); border: 1px solid var(--mn-border); border-left: 3px solid #308D8A; border-radius: 8px; padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 600; line-height: 1.25; margin-bottom: 4px;">ETF Flywheel</div>
+        <div style="font-size: 11px; color: var(--mn-muted-text); line-height: 1.4;">Canary ETF listing proves Marinade Select</div>
+      </div>
+      <div style="background: var(--mn-card-bg); border: 1px solid var(--mn-border); border-left: 3px solid #818CF8; border-radius: 8px; padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 600; line-height: 1.25; margin-bottom: 4px;">Custody Flywheel</div>
+        <div style="font-size: 11px; color: var(--mn-muted-text); line-height: 1.4;">Anchorage integration opens access</div>
+      </div>
+      <div style="background: var(--mn-card-bg); border: 1px solid var(--mn-border); border-left: 3px solid #CF7B63; border-radius: 8px; padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 600; line-height: 1.25; margin-bottom: 4px;">SSI Flywheel</div>
+        <div style="font-size: 11px; color: var(--mn-muted-text); line-height: 1.4;">SSI launch backs perpetual staking</div>
+      </div>
+      <div style="background: var(--mn-card-bg); border: 1px solid var(--mn-border); border-left: 3px solid #A794D4; border-radius: 8px; padding: 14px 16px;">
+        <div style="font-size: 13px; font-weight: 600; line-height: 1.25; margin-bottom: 4px;">Recipes Flywheel</div>
+        <div style="font-size: 11px; color: var(--mn-muted-text); line-height: 1.4;">USDG Recipe goes live on Figure</div>
       </div>
     </div>
   </section>

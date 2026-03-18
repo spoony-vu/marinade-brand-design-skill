@@ -88,6 +88,26 @@ Only use these colors. Never introduce new ones.
 | `highlight-yellow` | `#FEF29D` | Rare highlight accent (e.g., Marinade's position marker) |
 | `black` | `#000000` | Rare, strong emphasis only |
 
+### Categorical Palette — Differentiation Colors
+
+Use these when presenting multiple concepts side by side that need visual distinction — card border strokes, tag colors, multi-series charts, category indicators. Cycle through in order.
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `cat-teal` | `#308D8A` | First/primary category — default, uses brand-teal |
+| `cat-indigo` | `#818CF8` | Second category — protocol, governance, technical |
+| `cat-coral` | `#CF7B63` | Third category — growth, partnerships |
+| `cat-lavender` | `#A794D4` | Fourth category — community, social |
+| `cat-rose` | `#D4789B` | Fifth category — attention, auxiliary |
+
+**Rules:**
+- Use as left/top border strokes (3-4px) on cards, not as fills
+- Works on both white and dark teal backgrounds
+- Never use these for body text — they are structural/decorative only
+- For single-concept slides, stick to the teal spectrum. Categorical colors are only for differentiation.
+- On dark slides, use at full opacity. On white, use at 80-100% opacity.
+- Pair with a subtle tinted background: `rgba(color, 0.06)` inside the card
+
 ### Color Discipline Rules
 - The dominant background is `#FFFFFF` (white). Most slides are white-background.
 - Teal is the brand color family. All accent work stays within the teal spectrum.
@@ -495,6 +515,13 @@ Every slide must have exactly:
   --mn-near-white: #F3F3F3;
   --mn-dark-card: #232329;
   --mn-highlight: #FEF29D;
+
+  /* Categorical — for differentiating concepts */
+  --mn-cat-teal: #308D8A;
+  --mn-cat-indigo: #818CF8;
+  --mn-cat-coral: #CF7B63;
+  --mn-cat-lavender: #A794D4;
+  --mn-cat-rose: #D4789B;
 
   --mn-font-heading: 'DM Sans', sans-serif;
   --mn-font-body: 'DM Sans', sans-serif;
