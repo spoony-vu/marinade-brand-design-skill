@@ -44,6 +44,7 @@ These are the most common mistakes. Check your output against this list before p
 8. **Don't animate slides by default.** Marp output is static. Only add animation when explicitly using Remotion or HTML with motion.
 9. **Match archetypes exactly.** Every slide must map to one of the 16 patterns below. Don't create hybrid layouts or invent new slide structures.
 10. **Numbers need tabular-nums.** All dynamic numbers (TVL, APY, prices, dates) must use `font-variant-numeric: tabular-nums` so columns align.
+11. **Use the white logo on dark slides.** `marinade-logo.svg` has dark text (#182120) — invisible on teal/invert backgrounds. Switch to `marinade-logo-white.svg` via per-slide header override.
 
 ## Source of Truth
 
@@ -219,12 +220,14 @@ Pre-computed contrast ratios for common foreground/background pairs:
 | Asset | Path | Usage |
 |-------|------|-------|
 | Marinade wordmark | `~/Downloads/OG Image/Marinade.svg` | Title/cover slides — always above the headline |
-| Marinade logo (icon + text) | `assets/logos/marinade-logo.svg` | Competitive positioning, partner grids |
+| Marinade logo (icon + text) | `assets/logos/marinade-logo.svg` | Competitive positioning, partner grids (light backgrounds only) |
+| Marinade logo white | `assets/logos/marinade-logo-white.svg` | Header/logo on dark and teal slides |
 | Marinade hat | `assets/logos/marinade-hat.svg` | Decorative watermark on cover/accent slides |
 | Marinade icon | `assets/logos/marinade-icon.png` | Small icon contexts, partner rows |
 
 ### Logo Placement Rules
 - **Title slides**: Marinade.svg wordmark positioned above the headline, left-aligned
+- **Dark/teal slides**: The default `marinade-logo.svg` has dark text (#182120) which is invisible on dark backgrounds. Always use `marinade-logo-white.svg` on `teal`, `invert`, or any dark-background slide. In Marp, override the header per-slide: `<!-- _header: '![w:120](../assets/logos/marinade-logo-white.svg)' -->`
 - **Competitive matrix**: Use marinade-logo.svg or hat icon in the Marinade position marker (yellow highlight)
 - **Decorative**: Hat SVG at 10-15% opacity as watermark in top-right of cover slides
 - **Partner rows**: Use marinade-icon.png alongside partner logos
