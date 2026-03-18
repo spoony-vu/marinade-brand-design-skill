@@ -890,3 +890,43 @@ Tables use `font-variant-numeric: tabular-nums` for aligned numbers. Header bord
 - Statement slides as section dividers
 - Lead slides for opening and closing
 - Alternate text-heavy and visual slides
+
+---
+
+## VERIFICATION CHECKLIST
+
+Run through this checklist before presenting any output. Every item must pass.
+
+### Colors
+- [ ] Every color used appears in the strict palette (no invented colors)
+- [ ] `brand-teal` (#308D8A) on white is only used at 18pt+ (24px+)
+- [ ] `muted-text` (#7F7F7F) on white is only used at 18pt+ (24px+)
+- [ ] Body text on white uses `dark-primary`, `deep-teal`, or `body-secondary` only
+- [ ] Text on dark/teal backgrounds uses `white` or `light-teal`
+
+### Typography
+- [ ] All text is DM Sans (400 or 600 weight). No Calibri, Arial, or system fonts.
+- [ ] PT Serif italic used max once per slide, for a single accent word only
+- [ ] `font-variant-numeric: tabular-nums` on all numbers (TVL, APY, prices, counts)
+- [ ] `-webkit-font-smoothing: antialiased` applied
+- [ ] Minimum body text: 16px (web) / 21pt (slides)
+- [ ] Sentence case throughout. ALL CAPS only for acronyms (TAM, SAM, SOM, APY, SOL)
+
+### Layout
+- [ ] Slide maps to one of the 16 archetypes (no hybrid/invented layouts)
+- [ ] Content fills 60-70% max — remaining is intentional white space
+- [ ] Elements align to 12-column grid (0.83" margins)
+- [ ] Text never overflows containers (`overflow: hidden`, `word-break: break-word`)
+
+### Tone
+- [ ] No exclamation marks
+- [ ] No hype words ("revolutionary", "game-changing", "disrupting", "unlocking potential")
+- [ ] Metrics stated directly with numbers, not vague claims
+- [ ] One key message per slide
+
+### Technical
+- [ ] Slide dimensions are 1920x1080 (16:9)
+- [ ] Asset paths resolve correctly (relative paths from slide location)
+- [ ] Lucide icons use stroke-width 1.5, correct brand colors
+- [ ] Interactive icons have 44px+ touch targets and aria-labels
+- [ ] `prefers-reduced-motion: reduce` included for any animations
